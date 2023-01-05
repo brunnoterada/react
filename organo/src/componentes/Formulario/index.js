@@ -15,7 +15,7 @@ const Formulario = () =>{
                 <CampoTexto label='Nome' placeholder='Digite seu Nome'/>
                 <CampoTexto label='Cargo' placeholder='Digite seu cargo'/>
                 <CampoTexto label='Imagem' placeholder='Digite o caminho da imagem'/>
-                <ListaSuspensa itens={times}/>
+                <ListaSuspensa label='Time' itens={times}/>
             </form>
         </section>
     )
