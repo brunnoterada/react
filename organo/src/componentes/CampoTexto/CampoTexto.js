@@ -4,11 +4,15 @@ const CampoTexto = (props) =>{
 
     //Concatenar frase
     //const placeholderModificada =`${props.placeholder}...`;
+
+    const aoDigitado = (evento) =>{
+        console.log(evento.target.value)
+    }
    
     return (
         <div className="campo-texto"> 
             <label>{props.label}</label>
-            <input required={props.obrigatorio} placeholder={`${props.placeholder}...`}/>
+            <input onChange={aoDigitado} required={props.obrigatorio} placeholder={`${props.placeholder}...`}/>
         </div>
     )
 
