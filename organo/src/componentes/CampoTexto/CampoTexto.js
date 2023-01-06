@@ -5,8 +5,11 @@ const CampoTexto = (props) =>{
     //Concatenar frase
     //const placeholderModificada =`${props.placeholder}...`;
 
+    let valor = ''
+
     const aoDigitado = (evento) =>{
-        console.log(evento.target.value)
+        valor = evento.target.value
+        console.log(valor)
     }
    
     return (
