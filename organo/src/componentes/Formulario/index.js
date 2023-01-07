@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
@@ -13,10 +14,10 @@ const Formulario = () =>{
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    const [time, setTimes] = useState('')
 
     const aoSalvar = (evento) =>{
         evento.preventDefault()
-        console.log('Form foi Submetido', nome, cargo, imagem)
     }
     return(
         <section className='formulario'>
@@ -39,7 +40,12 @@ const Formulario = () =>{
                 placeholder='Digite o caminho da imagem'
                 valor={imagem}
                 aoAlterado ={valor => setImagem(valor)}/>
-                <ListaSuspensa label='Time' itens={times}/>
+                <ListaSuspensa
+                obrigatorio={true}
+                 label='Time' 
+                 itens={times}
+                 valor={time}
+                 aoAlterado ={valor => setTimes(valor)}/>
                 <Botao texto='Criar card'/>
             </form>
         </section>
