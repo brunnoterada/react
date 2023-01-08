@@ -4,11 +4,12 @@ import Formulario from './componentes/Formulario';
 
 
 function App() {
+  const [colaboradores, setColaboradore] = useState([])
 
   return (
     <div className="App">
       <Banner/>
-      <Formulario/>
+      <Formulario aoColaboradorCadastrado={colaborador => setColaboradores()}/> 
 
     </div>
   );
