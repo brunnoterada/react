@@ -5,7 +5,7 @@ import Formulario from './componentes/Formulario';
 
 function App() {
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+    setColaboradores([...colaboradores, colaborador])
   }
   const [colaboradores, setColaboradore] = useState([])
 
