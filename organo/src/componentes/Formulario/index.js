@@ -4,12 +4,7 @@ import CampoTexto from '../CampoTexto/CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 const Formulario = (props) =>{
-    const times= [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Design',
-    ]
+
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
