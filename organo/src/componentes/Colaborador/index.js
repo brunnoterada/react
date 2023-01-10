@@ -1,17 +1,17 @@
 import './Colaborador.css'
 
-const Colaborador=()=>{
+const Colaborador=(props)=>{
     return(
         <div className='colaborador'>
             <div className='cabecalho'>
-                <img src='https://avatars.githubusercontent.com/u/66955351?v=4' alt=' imagem do aluno'/>
+                <img src={props.imagem} alt={props.nome}/>
             </div>
             <div className='rodape'>
                 <h4>
-                    Brunno Terada
+                    {props.nome}
                 </h4>
                 <h5>
-                    Aluno 
+                    {props.cargo}
                 </h5>
             </div>
         </div>
