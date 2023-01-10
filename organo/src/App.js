@@ -24,7 +24,7 @@ function App() {
   {
       nome: 'UX e Design',
       corPrimaria: '#D86EBF',
-      corSecundaria: '#FAE95F5',
+      corSecundaria: '#FAE9f5',
   },
   {
       nome: 'Mobile',
@@ -45,9 +45,9 @@ function App() {
   return (
     <div className="App">
         <Banner /> 
-        <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/> 
+        <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/> 
        {
-        times.map(time => <Time nome={time.nome}/>)
+        times.map(time => <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>)
        }
     </div>
 );
