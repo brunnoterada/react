@@ -9,9 +9,7 @@ const Time = (props) =>{
             <h3 style={{borderColor : props.corPrimaria}}>
                 {props.nome}
             </h3>
-            <Colaborador/>
-            <Colaborador/>
-            <Colaborador/>
+            {props.colaboradores.map( colaborador => <Colaborador /> )}
         </section>
     )
 }
